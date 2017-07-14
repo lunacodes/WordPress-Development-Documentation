@@ -26,10 +26,10 @@ in addition to changing your Site/Home URL in Settings:
 
 ### 2. Permanently Delete WordPress Default Themes
 
-Stop WordPress from including the Twenty Fourteen - Twenty Sixteen themes when 
+Stop WordPress from including the Twenty Fourteen - Twenty Seventeen themes when 
 it auto-upgrades. 
 
-Note: I would make sure to still have Twenty Sixteen installed and updated for 
+Note: I would make sure to still have Twenty Seventeen installed and updated for 
 troubleshooting and site-restoration purposes
 
 ```php
