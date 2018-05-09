@@ -1,32 +1,34 @@
 # WordPress Snippets
 
+#Table of Contents
 <!-- MarkdownTOC -->
 
-* .htaccess
-    * 1. Automatic rewrites for SSL
-* wp-config.php
-  * 1. Disable WordFence:
-  * 2. Permanently Delete WordPress Default Themes
-* Admin Customization
-  * 1. Disable all\(?\) plugin notifications:
-  * 2. Remove WordPress Version from Dashboard Footer
-  * 3. Remove WordPress Version from Dashboard Footer for non-admins
-* Shortcodes
-  * 1. Add a shortcode
-* jQuery
-  * 1. Load jQuery
-* Icon Fonts
-  * 1. Load Font Awesome
-* Troubleshooting and Hacking
-  * 1. Rewrite A User's Password
-* Database
-  * 1. Database Collation and Character Set Issues
+* [.htaccess](#htaccess)
+    * [1. Automatic rewrites for SSL](#1-automatic-rewrites-for-ssl)
+* [wp-config.php](#wp-configphp)
+  * [1. Disable WordFence:](#1-disable-wordfence)
+  * [2. Permanently Delete WordPress Default Themes](#2-permanently-delete-wordpress-default-themes)
+* [Admin Customization](#admin-customization)
+  * [1. Disable all\(?\) plugin notifications:](#1-disable-all-plugin-notifications)
+  * [2. Remove WordPress Version from Dashboard Footer](#2-remove-wordpress-version-from-dashboard-footer)
+  * [3. Remove WordPress Version from Dashboard Footer for non-admins](#3-remove-wordpress-version-from-dashboard-footer-for-non-admins)
+* [Shortcodes](#shortcodes)
+  * [1. Add a shortcode](#1-add-a-shortcode)
+* [jQuery](#jquery)
+  * [1. Load jQuery](#1-load-jquery)
+* [Icon Fonts](#icon-fonts)
+  * [1. Load Font Awesome](#1-load-font-awesome)
+* [Troubleshooting and Hacking](#troubleshooting-and-hacking)
+  * [1. Rewrite A User's Password](#1-rewrite-a-users-password)
+* [Database](#database)
+  * [1. Database Collation and Character Set Issues](#1-database-collation-and-character-set-issues)
 
 <!-- /MarkdownTOC -->
 
-<br />
+<a id="htaccess"></a>
 ## .htaccess  
 
+<a id="1-automatic-rewrites-for-ssl"></a>
 #### 1. Automatic rewrites for SSL 
 
 This makes sure you don't lose your existing links from other sites. Do this 
@@ -41,13 +43,16 @@ in addition to changing your Site/Home URL in Settings:
 ```
 
 <br />
+<a id="wp-configphp"></a>
 ## wp-config.php
 
+<a id="1-disable-wordfence"></a>
 ### 1. Disable WordFence:
 ```php
 <?php define('WFWAF_ENABLED', false); ?>
 ```
 
+<a id="2-permanently-delete-wordpress-default-themes"></a>
 ### 2. Permanently Delete WordPress Default Themes
 
 Stop WordPress from including the Twenty Fourteen - Twenty Seventeen themes when 
@@ -61,13 +66,16 @@ troubleshooting and site-restoration purposes
 ```
 
 <br />
+<a id="admin-customization"></a>
 ## Admin Customization
 
+<a id="1-disable-all-plugin-notifications"></a>
 ### 1. Disable all(?) plugin notifications:
 ```php 
 <?php add_filter('site_transient_update_plugins', '__return_false'); ?> 
 ```
 
+<a id="2-remove-wordpress-version-from-dashboard-footer"></a>
 ### 2. Remove WordPress Version from Dashboard Footer
 ```php
 <?php 
@@ -80,6 +88,7 @@ function remove_wp_version_footer() {
 ?>
 ```
 
+<a id="3-remove-wordpress-version-from-dashboard-footer-for-non-admins"></a>
 ### 3. Remove WordPress Version from Dashboard Footer for non-admins
 
 ```php
@@ -97,8 +106,10 @@ function remove_wp_version_footer_non_admins() {
 
 
 <br />
+<a id="shortcodes"></a>
 ## Shortcodes
 
+<a id="1-add-a-shortcode"></a>
 ### 1. Add a shortcode
 
 ```php
@@ -122,8 +133,10 @@ add_shortcode( 'ad', 'be_ad_shortcode' );
 ```
 
 <br />
+<a id="jquery"></a>
 ## jQuery
 
+<a id="1-load-jquery"></a>
 ### 1. Load jQuery
 
 ```php
@@ -146,8 +159,10 @@ function load_jquery() {
 ```
 
 <br />
+<a id="icon-fonts"></a>
 ## Icon Fonts
 
+<a id="1-load-font-awesome"></a>
 ### 1. Load Font Awesome
 
 ```php
@@ -167,8 +182,10 @@ function enqueue_our_required_stylesheets(){
 
 
 <br />
+<a id="troubleshooting-and-hacking"></a>
 ## Troubleshooting and Hacking
 
+<a id="1-rewrite-a-users-password"></a>
 ### 1. Rewrite A User's Password
 
 ```php
@@ -198,8 +215,10 @@ Note: An alternate method of doing this is to use phpMyAdmin or similar and navi
 I have seen both of these methods fail (usually due to a Database Collation or Character Set issue - either within the Database itself, or between wp-config.php). See the [Database Collation and Character Set Issues](#1-database-collation-and-character-set-issues) section for more info and troubleshooting suggestions.
 
 <br />
+<a id="database"></a>
 ## Database 
 
+<a id="1-database-collation-and-character-set-issues"></a>
 ### 1. Database Collation and Character Set Issues
 
 If you are having issues with your Database misbehaving, you may have Collation or Character Set Issues. If so, try the following:
