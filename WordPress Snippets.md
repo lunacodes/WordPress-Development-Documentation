@@ -1,5 +1,29 @@
 # WordPress Snippets
 
+<!-- MarkdownTOC -->
+
+* .htaccess
+    * 1. Automatic rewrites for SSL
+* wp-config.php
+  * 1. Disable WordFence:
+  * 2. Permanently Delete WordPress Default Themes
+* Admin Customization
+  * 1. Disable all\(?\) plugin notifications:
+  * 2. Remove WordPress Version from Dashboard Footer
+  * 3. Remove WordPress Version from Dashboard Footer for non-admins
+* Shortcodes
+  * 1. Add a shortcode
+* jQuery
+  * 1. Load jQuery
+* Icon Fonts
+  * 1. Load Font Awesome
+* Troubleshooting and Hacking
+  * 1. Rewrite A User's Password
+* Database
+  * 1. Database Collation and Character Set Issues
+
+<!-- /MarkdownTOC -->
+
 <br />
 ## .htaccess  
 
